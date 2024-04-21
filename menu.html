@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Pizzas - Pizzaria Shrek</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-img-top {
+            width: 100%;
+            height: 15vw;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Pizzaria Shrek</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Início</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="menu.html">Menu <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.html">Carrinho</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Menu de Pizzas</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Pizza de Calabresa">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza de Calabresa</h5>
+                        <p class="card-text">Uma deliciosa combinação de calabresa com cebola e azeitonas.</p>
+                        <button class="btn btn-primary add-to-cart" data-pizza="Calabresa">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Pizza Margherita">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza Margherita</h5>
+                        <p class="card-text">Feita com molho de tomate, mozzarella fresca, manjericão e azeite.</p>
+                        <button class="btn btn-primary add-to-cart" data-pizza="Margherita">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://via.placeholder.com/400x300" class="card-img-top" alt="Pizza Quatro Queijos">
+                    <div class="card-body">
+                        <h5 class="card-title">Pizza Quatro Queijos</h5>
+                        <p class="card-text">Uma saborosa mistura de quatro queijos: gorgonzola, mozzarella, parmesão e provolone.</p>
+                        <button class="btn btn-primary add-to-cart" data-pizza="Quatro Queijos">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Adicionado ao carrinho: ' + this.getAttribute('data-pizza'));
+                // Aqui você pode adicionar lógica para adicionar o item ao carrinho de compras
+            });
+        });
+    </script>
+</body>
+</html>
